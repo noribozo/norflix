@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { GlobalStyles } from './global-styles';
+
+import App  from './App';
+import { FirebaseContext } from './context/firebase';
+
+
+import { seedDatabase } from './seed';
+
+
+const config = {
+    apiKey: "AIzaSyCTnP5XMLF-dONzx4Bakt7GvjKnRb8jd70",
+    authDomain: "netflix-clone-scrimba-d5585.firebaseapp.com",
+    databaseURL: "netflix-clone-scrimba-d5585.firebaseio.com",
+    projectId: "netflix-clone-scrimba-d5585",
+    storageBucket: "netflix-clone-scrimba-d5585.appspot.com",
+    messagingSenderId: "469350232874",
+    appId: "1:469350232874:web:bf85e2421e9963b35d2453"
+};
+
+const firebase = window.firebase.initializeApp(config);
+seedDatabase(firebase);
 
 ReactDOM.render(
-  <React.StrictMode>
+  <>
+  <FirebaseContext.Provider value={{ firebase: window.firebase}}>
+    <GlobalStyles />
     <App />
-  </React.StrictMode>,
+  </FirebaseContext.Provider>
+  </>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
