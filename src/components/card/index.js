@@ -1,7 +1,8 @@
 import React, { useState, useContext, createContext } from 'react';
 
-import { Container, Group, Title, SubTitle, Text, Feature, FeatureTitle, FeatureText,
-    FeatureClose, Maturity, Content, Meta, Entities, Item, Image } from './styles/card';
+import { Container, Group, Title, SubTitle, Text, Feature, 
+    FeatureTitle, FeatureText, FeatureClose, Maturity, Content, 
+    Meta, Entities, Item, Image } from './styles/card';
 
 const FeatureContext = createContext();
 
@@ -42,7 +43,7 @@ Card.Title = function CardTitle({ children, ...restProps}) {
  }
 
  Card.Item = function CardItem({ item, children, ...restProps }) {
-     const {setShowFeature, setItemFeature } = useContext(FeatureContext);
+     const { setShowFeature, setItemFeature } = useContext(FeatureContext);
 
      return (
          <Item 
@@ -50,10 +51,11 @@ Card.Title = function CardTitle({ children, ...restProps}) {
                 setItemFeature(item);
                 setShowFeature(true);
             }}
-            {...restProps}>
+            {...restProps}
+        >
                 {children}
             </Item>
-     )
+     );
  }
 
  Card.Image= function CardImage({ ...restProps}) {
@@ -61,7 +63,7 @@ Card.Title = function CardTitle({ children, ...restProps}) {
  }
 
  Card.Feature = function CardFeature({ children, category, ...restProps}) {
-     const { showFeature, itemFeature, setShowFeature} = useContext(FeatureContext)
+     const { showFeature, itemFeature, setShowFeature} = useContext(FeatureContext);
 
      return showFeature ? (
          <Feature src={`images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}>
