@@ -54,7 +54,7 @@ export function BrowseContainer({ slides }){
                            <Header.Picture src={user.photoURL} />
                            <Header.Dropdown>
                                <Header.Group>
-                                   <Header.Picture src={user.photURL} />
+                                   <Header.Picture src={user.photoURL} />
                                    <Header.Link>{user.displayName}</Header.Link>
                                </Header.Group>
                                <Header.Group>
@@ -83,16 +83,15 @@ export function BrowseContainer({ slides }){
                         <Card.Entities>
                             {slideItem.data.map((item) => (
                                 <Card.Item key={item.docId} item={item}>
-                                    <Card.Image src={`/images/${category}/${item.genre}/${item.slug}
-                                        /small.jpg`} />
+                                    <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
                                     <Card.Meta>
-                                        <Card.Subtitle>{item.title}</Card.Subtitle>
+                                        <Card.SubTitle>{item.title}</Card.SubTitle>
                                         <Card.Text>{item.description}</Card.Text>
                                     </Card.Meta>
                                 </Card.Item>
                             ))}
                         </Card.Entities>
-                        <Card.Feature>
+                        <Card.Feature category={category}>
                             <p>I am feature!</p>
                         </Card.Feature>
                     </Card>
