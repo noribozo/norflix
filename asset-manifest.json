@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/norflix/static/js/main.0826acdc.chunk.js",
+    "main.js.map": "/norflix/static/js/main.0826acdc.chunk.js.map",
+    "runtime-main.js": "/norflix/static/js/runtime-main.05c0f43a.js",
+    "runtime-main.js.map": "/norflix/static/js/runtime-main.05c0f43a.js.map",
+    "static/js/2.e45175a9.chunk.js": "/norflix/static/js/2.e45175a9.chunk.js",
+    "static/js/2.e45175a9.chunk.js.map": "/norflix/static/js/2.e45175a9.chunk.js.map",
+    "index.html": "/norflix/index.html",
+    "static/js/2.e45175a9.chunk.js.LICENSE.txt": "/norflix/static/js/2.e45175a9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.05c0f43a.js",
+    "static/js/2.e45175a9.chunk.js",
+    "static/js/main.0826acdc.chunk.js"
+  ]
+}
