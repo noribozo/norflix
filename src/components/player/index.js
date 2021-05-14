@@ -5,21 +5,20 @@ import { Container, Button, Overlay, Inner } from './styles/player';
 export const PlayerContext = createContext();
 
 export default function Player({ children, ...restProps}) {
-    const {showPlayer, setShowPlayer} = useState(false);
+    const [showPlayer, setShowPlayer] = useState(false);
 
     return (
         <PlayerContext.Provider value={{ showPlayer, setShowPlayer }} >
             <Container { ...restProps}>{children}</Container>
         </PlayerContext.Provider>
-    )
-    
+    )    
 }
 
 Player.Video = function PlayerVideo({ ...restProps}) {
     const { showPlayer, setShowPlayer } = useContext(PlayerContext);
 
     return showPlayer
-        ? ReactDOM.createPortal (
+        ? ReactDOM.createPortal(
             <Overlay onClick={() => setShowPlayer(false)}>
                 <Inner>
                     <video id="netflix-player" controls>

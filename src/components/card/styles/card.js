@@ -72,7 +72,7 @@ export const Meta = styled.div`
     position: absolute;
     bottom: 0;
     padding: 10px;
-    background-color: #00008f;
+    background-color: rgba(0, 0, 0, 0.6);
 `;
 
 export const Image = styled.img`

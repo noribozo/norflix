@@ -6,7 +6,7 @@ import App  from './App';
 import { FirebaseContext } from './context/firebase';
 
 
-import { seedDatabase } from './seed';
+//import { seedDatabase } from './seed';
 
 
 const config = {
@@ -20,7 +20,7 @@ const config = {
 };
 
 const firebase = window.firebase.initializeApp(config);
-seedDatabase(firebase);
+//seedDatabase(firebase);
 
 ReactDOM.render(
   <>
