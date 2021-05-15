@@ -72,6 +72,7 @@ export const Meta = styled.div`
     position: absolute;
     bottom: 0;
     padding: 10px;
+    border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.6);
 `;
 
@@ -82,7 +83,8 @@ export const Image = styled.img`
     cursor: pointer;
     height: auto;
     padding: 0;
-    margin: 0;
+    margin: 10px;
+    border-radius: 5px;
 `;
 
 export const Item = styled.div`
